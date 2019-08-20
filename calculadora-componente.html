@@ -9,13 +9,30 @@
     <style>
       :host {
         display: block;
-        background-color: antiquewhite;
+        background-color:salmon;
       }
-    </style>   
-    <span>Suma: [[resultadoSuma]]</span> <br>
-    <span>Resta: [[resultadoResta]]</span> <br>
-    <span>Multiplicación: [[resultadoMultiplicacion]]</span> <br>
-    <span>División: [[resultadoDivision]]</span>
+      .grid-divs{
+        display: grid;
+        padding: 1em .5em;
+        width: 100%;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 10px;
+        color:cornsilk;
+        font-size: 20px;
+      }
+      h1{
+        color:floralwhite;
+        padding: .5em .5em;
+      }
+    </style>
+    <h1>Calculator</h1>
+    <div class="grid-divs">
+        <span>Suma: [[resultadoSuma]]</span> <br>
+        <span>Resta: [[resultadoResta]]</span> <br>
+        <span>Multiplicación: [[resultadoMultiplicacion]]</span> <br>
+        <span>División: [[resultadoDivision]]</span>
+    </div>
+
     <suma-componente operador1="{{operador1}}" operador2="{{operador2}}" resultado-suma="{{resultadoSuma}}"></suma-componente>
     <resta-componente operador1="{{operador1}}" operador2="{{operador2}}" resultado-resta="{{resultadoResta}}"></resta-componente>
     <division-componente operador1="{{operador1}}" operador2="{{operador2}}" resultado-division="{{resultadoDivision}}"></division-componente>
